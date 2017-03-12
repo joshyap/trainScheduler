@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Thomas The Train Scheduler</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+  </head>
+  <body>
+  <div class="content">
+
+    <div class="header">
+      <div class="jumbotron">
+        <h1>Thomas, The Train Scheduler</h1>
+        <p>Everyone knows monorails make the best one-liners.</p>
+        <!--<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>-->
+      </div>
+    </div>
+
+  <div class="panel panel-default panel-primary">
+    <div class="panel-heading panel-default panel-primary">Current Train Schedule</div>
+      <!-- Table -->
+      <table class="table">
+        <tr>
+          <th>Train Name</th>
+          <th>Destination</th>
+          <th>Frequency (Mins)</th>
+          <th>Next Arrival</th>
+          <th>Mins Away</th>
+        </tr>
+        <tr>
+          <td id="train">Crazy Train</td>
+          <td id="train-destination">Hell</td>
+          <td id="train-frequency">30</td>
+          <td id="train-next-arrival">2:40pm</td>
+          <td id="train-minutes-away">19</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="addTrainSection">
+       <div class="panel panel-default panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Add Train</h3>
+        </div>
+        <div class="panel-body">
+          <h5>Train Name</h5>
+          <form>
+            <input type="text" name="trainNamename" id="trainName">
+          </form>
+          
+          <h5>Destination</h5>
+          <form>
+            <input type="text" name="destinationNamename" id="destinationName">
+          </form>
+
+          <h5>First Train Time (HH:mm - military time</h5>
+          <form>
+            <input type="text" name="trainStartTimeName" id="trainStartTime">
+          </form>
+
+            <h5>Frequency (mins)</h5>
+          <form>
+            <input type="text" name="frequencyName" id="trainFrequency">
+          </form>
+
+          <br>
+          <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+
+        </div>
+      </div>
+    </div>  
+  
+
+  </div>
+  </body>
+</html>

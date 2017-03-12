@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Train Schedule</title>
+	<!--<link rel="stylesheet" href="assets/style.css">-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|VT323" rel="stylesheet">
+	<style type="text/css">
+		body {
+			font-family: 'Julius Sans One', sans-serif;	
+		}
+		
+	</style>
+</head>
+<body>
+
+<div class="container"> 
+
+	<div class="row"> 
+		<div class="col-lg-12 header"> 
+			<h1>Snow Piercer Train Schedule</h1>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-12"> 
+			<div class="panel panel-default color"> 
+				<div class="panel-heading">
+					<h3 class="panel-title"> 
+						Current Train Schedule
+					</h3>
+				</div>
+			<table class="table">
+			  <thead>
+			    <tr>
+			      <th>Train Name</th>
+			      <th>Destination</th>
+			      <th>Frequency (min)</th>
+			      <th>Next Arrival</th>
+			      <th>Minutes Away</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr>
+			      <td id="train"></td>
+			      <td id="train-destination"></td>
+			      <td id="train-frequency"></td>
+			      <td id="train-next-arrival"></td>
+			      <td id="train-minutes-away"></td>
+			    </tr>
+			  </tbody>
+			</table>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="row">
+		<div class="col-lg-12"> 
+			<div class="panel panel-default color"> 
+				<div class="panel-heading">
+					<h3 class="panel-title"> 
+						Add Train 
+					</h3>
+				</div>
+				<div class="panel-body">
+
+					<form> 
+						<div class="form-group"> 
+							<label for="train-name"> Train Name </label>
+							<br>
+							<input type="text" class="form-control" id="train-name"> 
+						</div>
+						<div class="form-group"> 
+							<label for="destination"> Destination </label>
+							<br>
+							<input type="text" class="form-control" id="destination-name"> 
+						</div>
+						<div class="form-group"> 
+							<label for="first-trainMT"> First Train Time (HH:mm - military time) </label>
+							<br>
+							<input type="text" class="form-control" id="first-trainMT"> 
+						</div>
+						<div class="form-group"> 
+							<label for="frequency"> Frequency (min)</label>
+							<br>
+							<input type="text" class="form-control" id="frequency-input"> 
+						</div>
+						<button type="submit" class="btn btn-default" id="searchBtn">Submit</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+
+
+    <!-- Moment.js Reference -->
+    <!-- <script src="http://momentjs.com/downloads/moment.js"></script>   -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+	<script src="assets//javascript/trainScheduler.js"> </script>
+
+</body>
+</html>
